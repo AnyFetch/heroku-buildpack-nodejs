@@ -83,6 +83,11 @@ fi
   fi
 
   status "Installing dependencies"
+  
+  export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$build_dir/.apt/usr/lib/pkgconfig/
+  export CPLUS_INCLUDE_PATH=CPLUS_INCLUDE_PATH:$build_dir/.apt/usr/include/
+  export LIBRARY_PATH=LIBRARY_PATH:$build_dir/.apt/usr/lib/
+  
   # Make npm output to STDOUT instead of its default STDERR
   npm install --userconfig $build_dir/.npmrc --production 2>&1 | indent
 )
