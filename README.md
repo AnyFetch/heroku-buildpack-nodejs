@@ -1,7 +1,8 @@
 Heroku Buildpack for Node.js
 ============================
 
-This is the official [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for Node.js apps. If you fork this repository, please **update this README** to explain what your fork does and why it's special.
+This is the official [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for Node.js apps.
+This repository has been forked to enable `npm install` to have access `PKG_CONFIG_PATH`, `CPLUS_INCLUDE_PATH` and `LIBRARY_PATH` to enable native CPP compilation depending on libraries installed with `heroku-buildpack-apt`.
 
 
 How it Works
